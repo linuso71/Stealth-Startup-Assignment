@@ -84,6 +84,7 @@ app.delete('/api/collections/:collectionId/recommendations/:recommendationId', a
 // View recommendations in a collection
 app.get('/api/collections/:collectionId', async (req, res) => {
   const { collectionId } = req.params;
+  // bonus
   const { page = 1, limit = 10 } = req.query;
   const offset = (page - 1) * limit;
 
@@ -96,8 +97,7 @@ app.get('/api/collections/:collectionId', async (req, res) => {
     if (!collection.rows.length) {
       return res.status(404).json({ error: 'Collection not found' });
     }
-
-    // Fetch paginated recommendations
+    
     const recommendations = await pool.query(
       `SELECT r.* FROM collection_recommendations cr 
        JOIN recommendations r ON cr.recommendation_id = r.id 
