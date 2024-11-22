@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 // PostgreSQL connection setup
 const pool = new Pool({
-  connectionString: 'postgresql://postgre_owner:9NZ1YlgiOkXm@ep-long-haze-a5ki5cri.us-east-2.aws.neon.tech/postgre?sslmode=require'
+  connectionString: 'write-yourdatabase-string'
 });
 
 
