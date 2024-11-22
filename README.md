@@ -31,6 +31,9 @@ This project implements a backend API for managing collections and their associa
 ### **1. Access PostgreSQL**
 Use a database client such as `psql`, `pgAdmin`, or any other preferred tool to connect to your PostgreSQL database.
 
+### **2. Connect with Your db in db.js file**
+In your database configuration, you'll use the Pool object from the pg library. Replace 'write-your-database-string' with your actual PostgreSQL connection string.
+
 ---
 
 ### **2. Import CSV Files**
