@@ -26,6 +26,24 @@ This project implements a backend API for managing collections and their associa
 
 ---
 
+## **How to Import the Sample Data**
+
+### **1. Access PostgreSQL**
+Use a database client such as `psql`, `pgAdmin`, or any other preferred tool to connect to your PostgreSQL database.
+
+---
+
+### **2. Import CSV Files**
+Use the `\copy` command in `psql` or the import feature in a GUI-based client like `pgAdmin` to import the data.
+
+#### **Command for Importing Data Using `psql`:**
+
+```sql
+\copy users(id, fname, sname, profile_picture, bio, created_at) FROM 'path/to/users.csv' DELIMITER ',' CSV HEADER;
+\copy recommendations(id, user_id, title, caption, category, created_at) FROM 'path/to/recommendations.csv' DELIMITER ',' CSV HEADER;
+```
+Replace 'path/to/users.csv' and 'path/to/recommendations.csv' with the actual paths to the CSV files on your system.
+
 # **Installation**
 
 1. Clone the repository:
